@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio | Paulo Jr. Rochenback</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #222831;
+            --bg-darker: #1b2027;
+            --bg-section: #31363F;
+            --accent: #00ADB5;
+            --text: #EEEEEE;
+            --muted: #C7C7C7;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            position: relative;
+            padding-top: 50px;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: var(--bg-section);
+            border: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+        }
+
+        .navbar .navbar-toggle .icon-bar {
+            background: #fff;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: .2px;
+            transition: color .15s ease, opacity .15s ease;
+            opacity: .9;
+        }
+
+        .navbar-inverse .navbar-nav>li>a:hover,
+        .navbar-inverse .navbar-nav>li>a:focus {
+            color: var(--accent);
+            opacity: 1;
+        }
+
+        .navbar-nav {
+            float: none;
+            margin: 0 auto;
+            display: table;
+            table-layout: fixed;
+        }
+
+        @media (max-width:767px) {
+            .navbar-nav {
+                display: block;
+                text-align: center;
+            }
+
+            .navbar-nav>li {
+                float: none;
+                display: inline-block;
+            }
+        }
+
+        .jumbotron {
+            padding: 80px 20px 50px;
+            margin-bottom: 0;
+            background: linear-gradient(180deg, var(--bg-darker), var(--bg-dark));
+            color: #fff;
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .jumbotron p.lead {
+            color: var(--muted);
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-weight: 300;
+        }
+
+        .social-badges img {
+            margin: 6px;
+            transition: transform .2s ease, filter .2s ease;
+            vertical-align: middle;
+        }
+
+        .social-badges img:hover {
+            transform: translateY(-2px) scale(1.03);
+            filter: brightness(1.1);
+        }
+
+        .section {
+            padding: 60px 0;
+            background: var(--bg-dark);
+        }
+
+        .section.alt {
+            background: var(--bg-section);
+        }
+
+        .section h3 {
+            color: var(--accent);
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 24px;
+            letter-spacing: .2px;
+        }
+
+        .section p {
+            color: #E9E9E9;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 12px;
+            padding: 16px;
+            transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+            border-color: rgba(255, 255, 255, .12);
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .media+.media {
+            margin-top: 26px;
+        }
+
+        .mb-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .mb-10 {
+            margin-bottom: 10px !important;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px !important;
+        }
+
+        .mt-0 {
+            margin-top: 0 !important;
+        }
+
+        .mt-10 {
+            margin-top: 10px !important;
+        }
+
+        .mt-20 {
+            margin-top: 20px !important;
+        }
+
+        [id]::before {
+            content: "";
+            display: block;
+            height: 70px;
+            margin-top: -70px;
+            visibility: hidden;
+        }
+
+        a,
+        a:focus,
+        a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#professional">Professional Experience</a></li>
+                    <li><a href="#stack">My Stack</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="mt-0 mb-0">Paulo Jr. Rochenbach</h1>
+            <p class="lead mb-20">Data Analyst</p>
+            <div class="social-badges">
+                <a href="https://www.linkedin.com/in/paulo-rochenbach-24ab93241" target="_blank" rel="noopener">
+                    <img alt="LinkedIn"
+                        src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+                </a>
+                <a href="https://github.com/paulorochenbach" target="_blank" rel="noopener">
+                    <img alt="GitHub"
+                        src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="carousel-wrapper">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/project-1.webp" alt="Project 1">
+                </div>
+                <div class="item">
+                    <img src="img/project-2.png" alt="Project 2">
+                </div>
+                <div class="item">
+                    <img src="img/project-3.png" alt="Project 3">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h3>About me</h3>
+            <div class="media">
+                <div class="media-left">
+                    <img src="img/profile-picture.png" class="media-object img-responsive" style="width:260px" alt="Profile photo">
+                </div>
+                <div class="media-body">
+                    <p class="muted">About me.......</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="professional" class="section alt">
+        <div class="container">
+            <h3>Professional Experience</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="project-card mb-20">
+                        <h4 class="mt-0">Empresa / Projeto A</h4>
+                        <p class="muted mb-0">Resumo do impacto, stack usada, resultados alcançados.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="project-card mb-20">
+                        <h4 class="mt-0">Empresa / Projeto B</h4>
+                        <p class="muted mb-0">Resumo do impacto, stack usada, resultados alcançados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="section">
+        <div class="container">
+            <h3>My Stack</h3>
+            <p class="muted">Liste aqui linguagens, libs e ferramentas (ex.: Python, Pandas, Power BI, SQL, Git,
+                Docker…).</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section alt">
+        <div class="container">
+            <h3>My Projects</h3>
+
+            <div class="media project-card">
+                <div class="media-left">
+                    <img src="img/project-1.webp" alt="Projeto 1" class="media-object" style="width:500px">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Projeto 1</h4>
+                    <p class="muted">Descrição curta do problema, abordagem e resultado (KPIs, gráficos, ganhos...).</p>
+                </div>
+            </div>
+
+            <div class="media project-card" style="margin-top:20px;">
+                <div class="media-body">
+                    <h4 class="media-heading">Projeto 2</h4>
+                    <p class="muted">Descrição curta do problema, abordagem e resultado.</p>
+                </div>
+                <div class="media-right">
+                    <img src="img/project-2.png" alt="Projeto 2" class="media-object" style="width:500px">
+                </div>
+            </div>
+
+            <div class="media project-card" style="margin-top:20px;">
+                <div class="media-left">
+                    <img src="img/project-3.png" class="media-object" style="width:500px">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Projeto 3</h4>
+                    <p class="muted">Descrição curta do problema, abordagem e resultado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
